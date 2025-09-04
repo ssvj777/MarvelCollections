@@ -6,7 +6,7 @@ function toggleMenu(){
 }
 
 function closeNavbar(){
-    sidenav.style.left = "-60%"
+    sidenav.style.left = "-70%"
 }
 
 // Close the menu when a link is clicked

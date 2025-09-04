@@ -88,10 +88,10 @@ html {
     background: var(--panel); 
     border-bottom: 1px solid rgba(140,150,170,.15);
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-    width: 50%;
+    width: 60%;
     height: 100%;
     top: 0;
-    left: -60%;
+    left: -70%;
     position: fixed;
     transition: 1s;
     padding: 123px 17px ;
