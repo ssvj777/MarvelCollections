@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e272e;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    padding-top: 115px;
+}
+
+html {
+    scroll-padding-top: 115px;
+}
+
+/* navbar styling */
+.navbar {
+    background: linear-gradient(90deg, #0b0f1a 0%, #101726 100%);
+    color: white;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    column-gap: 28px;
+}
+
+.navbar ul li, .navbar-side ul li {
+    display: inline-block;
+}
+
+.navbar ul li a , .navbar-side ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.navbar ul li a:hover, .navbar-side ul li a:hover {
+    color: #05c793;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* side navbar styling */
+.navbar-side {
+    background: linear-gradient(90deg, #0b0f1a 0%, #101726 100%);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -60%;
+    position: fixed;
+    transition: 1s;
+}
+
+.navbar-side ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 140px 0 0 35px;
+    row-gap: 30px;
+}
+
+/* tittle styling */
+h1 {
+    color: green;
+    text-align: center;
+    padding-top: 17px;
+}
+
+h2 {
+    color: #f5a623;
+    text-align: center;
+    padding: 10px ;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 28px;
+    padding: 10px;
+}
+
+.movie-session {
+    max-width: 350px;
+    color: white;
+    padding: 20px;
+    background-color: #0d0d0d;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.movie-session img {
+    width: 100%;
+    min-width: 310px;
+    min-height: 140px;
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin: 10px 0 10px 0;
+}
+
+.movie-session h2 {
+    color: #05c793;
+    padding: 5px;
+}
+.movie-session h3 {
+    color: #f5a623;
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 800px) {
+    .navbar ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: white;
+    }
+}
