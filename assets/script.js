@@ -1,6 +1,12 @@
+// Side Navbar display
+var sidenav= document.querySelector(".navbar-side")
 
-function toggleMenu() {
-    document.querySelector(".navbar-side").style.left = "0";
+function toggleMenu(){
+    sidenav.style.left = "0"
+}
+
+function closeNavbar(){
+    sidenav.style.left = "-60%"
 }
 
 // Close the menu when a link is clicked
