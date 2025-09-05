@@ -1,21 +1,24 @@
-// Side Navbar display
-var sidenav= document.querySelector(".navbar-side")
+//Navbar Script 
+
+let sideNavbar = document.querySelector(".sideNavbar")
 
 function toggleMenu(){
-    sidenav.style.left = "0"
+    sideNavbar.style.left = "0"
 }
 
 function closeNavbar(){
-    sidenav.style.left = "-70%"
+    sideNavbar.style.left = "-70%"
 }
 
+
 // Close the menu when a link is clicked
+
 document.addEventListener("DOMContentLoaded", function () {
-    const listcontents = document.querySelectorAll(".navbar-side ul li a");
+    const listcontents = document.querySelectorAll(".sideNavbar a");
 
     listcontents.forEach(function (listcontent) {
         listcontent.addEventListener("click", function () {
-            document.querySelector(".navbar-side").style.left = "-60%";
+            document.querySelector(".sideNavbar").style.left = "-70%";
         });
     });
 });
