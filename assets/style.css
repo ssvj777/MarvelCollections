@@ -56,7 +56,6 @@ html {
     color: var(--text);
     font-size: 28px;
     display: none;
-    align-items: center;
     cursor: pointer;
     transition: .2s ease;
 }
@@ -105,9 +104,9 @@ html {
     transition: .2s ease;
 }
 
-/* .sideNavbar .closeNavbar:hover {
+.sideNavbar .closeNavbar:hover {
     transform: translateY(-1px); 
-} */
+}
 
 /* Common Navbar Content Styling */
 .navbarList a, .sideNavbarList a {
@@ -197,7 +196,7 @@ h1 {
     }
 
     .navbar .toggleButton{
-        display: flex;
+        display: block;
         padding: 22px;
     }
 
