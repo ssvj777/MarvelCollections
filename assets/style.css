@@ -105,9 +105,9 @@ html {
     transition: .2s ease;
 }
 
-.sideNavbar .closeNavbar:hover {
+/* .sideNavbar .closeNavbar:hover {
     transform: translateY(-1px); 
-}
+} */
 
 /* Common Navbar Content Styling */
 .navbarList a, .sideNavbarList a {
