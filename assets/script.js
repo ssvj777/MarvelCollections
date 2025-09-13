@@ -2,13 +2,13 @@
 
 let sideNavbar = document.querySelector(".sideNavbar")
 
-function toggleMenu(){
+document.querySelector(".togglebtn").addEventListener("click",function(){
     sideNavbar.style.left = "0"
-}
+})
 
-function closeNavbar(){
+document.querySelector(".xMark").addEventListener("click",function(){
     sideNavbar.style.left = "-70%"
-}
+})
 
 
 // Close the menu when a link is clicked
