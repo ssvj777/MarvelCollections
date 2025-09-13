@@ -56,7 +56,7 @@ html {
     color: var(--text);
     font-size: 28px;
     display: none;
-    cursor: pointer;
+    align-items: center;
     transition: .2s ease;
 }
 
@@ -196,7 +196,7 @@ h1 {
     }
 
     .navbar .toggleButton{
-        display: block;
+        display: flex;
         padding: 22px;
     }
 
