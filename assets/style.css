@@ -34,6 +34,7 @@ body {
 /* HTML Scroll Styling */
 html {
   scroll-padding-top: 123px;
+  scroll-behavior: smooth;
 }
 
 /* Navbar Styling */
@@ -131,6 +132,34 @@ html {
   box-shadow: var(--shadow-soft);
 }
 
+/* Scroll button styling */
+.scrollBtn {
+  position: fixed;
+  height: 50px;
+  width: 47px;
+  color: var(--text);
+  background-color: var(--panel);
+  border: 1px solid rgba(222, 222, 222, 0.1);
+  box-shadow: 0 0 15px rgba(222, 222, 222, 0.1);
+  right: 22px;
+  bottom: 28px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  z-index: 999;
+  font-size: 28px;
+  border-radius: 7px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scrollBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 30px;
+}
+
 /* Movies Session Styling */
 h1 {
   color: #f5a623;
@@ -214,5 +243,10 @@ h1 {
   .navbar .showNavbar .togglebtn,
   .navbar .closeNavbar .xMark {
     display: block;
+  }
+
+  .scrollBtn {
+    right: 17px;
+    bottom: 3px;
   }
 }

@@ -30,6 +30,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+// Show/Hide button on scroll
+const scrollBtn = document.querySelector(".scrollBtn");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 444) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+// Scroll to top on click
+scrollBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+
 // Animation script for Marvel Movies
 const animationMarvelMovies = ["The Infinity Saga"];
 
