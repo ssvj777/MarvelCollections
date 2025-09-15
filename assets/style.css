@@ -141,7 +141,7 @@ html {
   background-color: var(--panel);
   border: 1px solid rgba(222, 222, 222, 0.1);
   box-shadow: 0 0 15px rgba(222, 222, 222, 0.1);
-  right: 22px;
+  right: 28px;
   bottom: 28px;
   text-align: center;
   line-height: 50px;
