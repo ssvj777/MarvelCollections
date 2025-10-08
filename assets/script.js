@@ -1,3 +1,32 @@
+//Loading Screen Script
+
+window.addEventListener("load", () => {
+  const loading = document.getElementById("loading");
+  setTimeout(() => {
+    loading.classList.add("hidden");
+  }, 700);
+});
+
+// Scroll to Top Button
+
+const scrollTop = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 333) {
+    scrollTop.classList.add("visible");
+  } else {
+    scrollTop.classList.remove("visible");
+  }
+});
+
+scrollTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+
 //Navbar Script
 
 let sideNavbar = document.querySelector(".sideNavbar");
@@ -30,27 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-// Show/Hide button on scroll
-const scrollBtn = document.querySelector(".scrollBtn");
-
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 444) {
-    scrollBtn.classList.add("show");
-  } else {
-    scrollBtn.classList.remove("show");
-  }
-});
-
-// Scroll to top on click
-scrollBtn.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
-
-
 // Animation script for Marvel Movies
 const animationMarvelMovies = ["The Infinity Saga"];
 
@@ -60,7 +68,8 @@ new Typed("#marvelMovies", {
   typeSpeed: 47,
   backSpeed: 222,
   loop: true,
-  showCursor: false,
+  showCursor: true,
+  cursorChar: "|"
 });
 
 const animationMultiverseSaga = ["The Multiverse Saga"];
@@ -72,7 +81,8 @@ new Typed("#multiverse", {
   typeSpeed: 47,
   backSpeed: 222,
   loop: true,
-  showCursor: false,
+  showCursor: true,
+  cursorChar: "|"
 });
 
 // Animation script for Marvel Series
@@ -85,7 +95,8 @@ new Typed("#marvelseries", {
   typeSpeed: 47,
   backSpeed: 222,
   loop: true,
-  showCursor: false,
+  showCursor: true,
+  cursorChar: "|"
 });
 
 // Animation script for Sony Movies
@@ -98,7 +109,8 @@ new Typed("#sony", {
   typeSpeed: 47,
   backSpeed: 222,
   loop: true,
-  showCursor: false,
+  showCursor: true,
+  cursorChar: "|"
 });
 
 // Animation script for Fox Movies
@@ -111,5 +123,11 @@ new Typed("#fox", {
   typeSpeed: 47,
   backSpeed: 222,
   loop: true,
-  showCursor: false,
+  showCursor: true,
+  cursorChar: "|"
 });
+
+// Get the current year
+const currentYear = new Date().getFullYear();
+// Set the current year in the span with id "year"
+document.getElementById("year").textContent = currentYear;

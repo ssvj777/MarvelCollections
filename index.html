@@ -63,14 +63,21 @@
       </div>
     </nav>
 
-    <!-- Scroll Button start -->
-    <div class="scrollBtn">
-        <i class="fas fa-angle-double-up"></i>
+        <!-- Loading Screen -->
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
     </div>
+
+        <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      <i class="fas fa-angle-double-up"></i>
+    </button>
 
     <!-- Marvel Movies -->
     <div class="MarvelMovies">
-      <h1 id="marvelMovies"></h1>
+      <h1>
+        <span id="marvelMovies"></span>
+      </h1>
       <div>
         <h2 class="phase">Phase One (2008 - 2012)</h2>
         <div class="container">
@@ -495,7 +502,9 @@
       </div>
 
       <div>
-        <h1 id="multiverse"></h1>
+        <h1>
+          <span id="multiverse"></span>
+        </h1>
         <h2 class="phase">Phase Four (2021 - 2022)</h2>
         <div class="container">
           <div class="movieSession">
@@ -824,7 +833,9 @@
 
     <!-- Marvel Series -->
     <div class="marvelSeries">
-      <h1 id="marvelseries"></h1>
+      <h1 >
+        <span id="marvelseries"></span>
+      </h1>
       <div>
         <h2 class="phase">Phase Four (2021 - 2022)</h2>
         <div class="container">
@@ -1180,7 +1191,9 @@
 
     <!-- Sony Movies -->
     <div class="sonyMovies">
-      <h1 id="sony"></h1>
+      <h1>
+        <span id="sony"></span>
+      </h1>
       <div class="container">
         <div class="movieSession">
           <div>
@@ -1371,7 +1384,9 @@
 
     <!-- Fox Movies -->
     <div class="foxMovies">
-      <h1 id="fox"></h1>
+      <h1>
+        <span id="fox"></span>
+      </h1>
       <h2 class="phase">Fantastic Four Movies</h2>
       <div class="container">
         <div class="movieSession">
@@ -1631,7 +1646,17 @@
       </div>
     </div>
 
-    <!-- Typed js script -->
+        <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; <span id="year"></span> | Created By
+          <a href="https://www.linkedin.com/in/ssvj777/">VIJAY SS</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- External Typed js script Link -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <!-- External Javascript File start-->
