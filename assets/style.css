@@ -212,7 +212,6 @@ html {
   font-style: italic;
   font-weight: 600;
   font-size: 17px;
-  cursor: pointer;
   border: 1px solid rgba(140, 150, 170, 0.25);
   border-radius: 13px;
   transition: all 0.3s ease;
@@ -376,13 +375,6 @@ border-color:rgba(222, 222, 222, 0.1);
 
 /* Mobile Screen Responsive Styling */
 @media screen and (max-width: 910px) {
-
-  /* Navbar Content Styling */
-.navbarList a,
-.sideNavbarList a {
-  cursor:auto;
-}
-
   .navbar .navbarList {
     display: none;
   }
@@ -417,4 +409,3 @@ border-color:rgba(222, 222, 222, 0.1);
 
 
 }
-
