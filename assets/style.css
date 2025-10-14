@@ -25,7 +25,7 @@
   --marvel-blue: rgba(5, 236, 236, 0.863);
 --marvel-gold: #f5a623;
 --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.45);
---gradient: linear-gradient(147deg, var(--primary) 0%, var(--marvel-blue) 100%);
+--gradient: linear-gradient(147deg, var(--marvel-blue) 100%, var(--primary) 0%);
 }
 
 /* Body Styling */
@@ -244,6 +244,7 @@ html {
   color: var(--marvel-blue);
   border-color: var(--marvel-blue);
   transform: translateY(-3px);
+    border-radius: 13px;
 }
 
 /* Movies Session Styling */
@@ -275,9 +276,9 @@ h1 {
   width: 367px;
   padding: 22px;
   color: var(--text);
-  background-color: #0d0d0ddc;
-  border: 2px solid rgba(222, 222, 222, 0);
-
+  background-color: #0d0d0df1;
+  border: 0.7px solid rgba(222, 222, 222, 0);
+border-color:rgba(222, 222, 222, 0.1);
   box-shadow: 0 0 15px rgba(222, 222, 222, 0.021);
   border-radius: 13px;
   margin-bottom: 28px;
@@ -290,6 +291,7 @@ h1 {
 
 .container .movieSession:hover {
   transform: translateY(-8px) scale(1.02);
+    border: 2px solid rgba(222, 222, 222, 0);
   border-color:rgba(222, 222, 222, 0.1);
 }
 .movieSession img {
