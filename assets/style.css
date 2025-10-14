@@ -105,7 +105,6 @@ html {
   transform: translateY(100px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
-  cursor: pointer;
 }
 
 .scroll-top i {
@@ -377,6 +376,13 @@ border-color:rgba(222, 222, 222, 0.1);
 
 /* Mobile Screen Responsive Styling */
 @media screen and (max-width: 910px) {
+
+  /* Navbar Content Styling */
+.navbarList a,
+.sideNavbarList a {
+  cursor:auto;
+}
+
   .navbar .navbarList {
     display: none;
   }
@@ -411,3 +417,4 @@ border-color:rgba(222, 222, 222, 0.1);
 
 
 }
+
