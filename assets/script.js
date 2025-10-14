@@ -29,17 +29,17 @@ scrollTop.addEventListener("click", () => {
 
 //Navbar Script
 
-let sideNavbar = document.querySelector(".sideNavbar");
-let showToggle = document.querySelector(".showNavbar");
-let showCloseBtn = document.querySelector(".closeNavbar");
+let sideNavbar = document.querySelector(".side-navbar");
+let showToggle = document.querySelector(".show-navbar");
+let showCloseBtn = document.querySelector(".close-navbar");
 
-document.querySelector(".togglebtn").addEventListener("click", function () {
+document.querySelector(".toggle-btn").addEventListener("click", function () {
   sideNavbar.style.left = "0";
   showToggle.style.display = "none";
   showCloseBtn.style.display = "flex";
 });
 
-document.querySelector(".xMark").addEventListener("click", function () {
+document.querySelector(".x-mark").addEventListener("click", function () {
   sideNavbar.style.left = "-70%";
   showToggle.style.display = "flex";
   showCloseBtn.style.display = "none";
@@ -48,7 +48,7 @@ document.querySelector(".xMark").addEventListener("click", function () {
 // Close the menu when a link is clicked
 
 document.addEventListener("DOMContentLoaded", function () {
-  const listcontents = document.querySelectorAll(".sideNavbar a");
+  const listcontents = document.querySelectorAll(".side-navbar a");
 
   listcontents.forEach(function (listcontent) {
     listcontent.addEventListener("click", function () {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const animationMarvelMovies = ["The Infinity Saga"];
 
 // Typing animation script start
-new Typed("#marvelMovies", {
+new Typed("#marvel-movies", {
   strings: animationMarvelMovies,
   typeSpeed: 47,
   backSpeed: 222,
@@ -89,7 +89,7 @@ new Typed("#multiverse", {
 const animationMarvelSeries = ["Marvel Series"];
 
 // Typing animation script start
-new Typed("#marvelseries", {
+new Typed("#marvel-series", {
   // use id selector
   strings: animationMarvelSeries,
   typeSpeed: 47,

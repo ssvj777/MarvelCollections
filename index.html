@@ -23,6 +23,17 @@
     />
   </head>
   <body>
+
+            <!-- Loading Screen -->
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+    </div>
+
+        <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      <i class="fas fa-angle-double-up"></i>
+    </button>
+
     <!-- Navbar -->
     <nav class="navbar">
       <!-- Navbar Logo -->
@@ -35,53 +46,43 @@
       </div>
 
       <!-- Navbar Toggle Buttton -->
-      <div class="showNavbar">
-        <i class="togglebtn fa-solid fa-bars"></i>
+      <div class="show-navbar">
+        <i class="toggle-btn fa-solid fa-bars"></i>
       </div>
 
       <!-- Navbar Close Buttton -->
-      <div class="closeNavbar">
-        <i class="xMark fa-solid fa-xmark"></i>
+      <div class="close-navbar">
+        <i class="x-mark fa-solid fa-xmark"></i>
       </div>
 
       <!-- Navbar List Content -->
-      <div class="navbarList">
-        <a href="#" class="navbarListItems"><p>Marvel Movies</p></a>
-        <a href="#marvelseries">Marvel Series</a>
+      <div class="navbar-list">
+        <a href="#">Marvel Movies</a>
+        <a href="#marvel-series">Marvel Series</a>
         <a href="#sony">Sony Movies</a>
         <a href="#fox">Fox Movies</a>
       </div>
     </nav>
 
     <!-- Side Navbar -->
-    <nav class="sideNavbar">
-      <div class="sideNavbarList">
+    <nav class="side-navbar">
+      <div class="side-navbar-list">
         <a href="#">Marvel Movies</a>
-        <a href="#marvelseries">Marvel Series</a>
+        <a href="#marvel-series">Marvel Series</a>
         <a href="#sony">Sony Movies</a>
         <a href="#fox">Fox Movies</a>
       </div>
     </nav>
 
-        <!-- Loading Screen -->
-    <div class="loading" id="loading">
-      <div class="spinner"></div>
-    </div>
-
-        <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-      <i class="fas fa-angle-double-up"></i>
-    </button>
-
     <!-- Marvel Movies -->
     <div class="MarvelMovies">
       <h1>
-        <span id="marvelMovies"></span>
+        <span id="marvel-movies"></span>
       </h1>
       <div>
         <h2 class="phase">Phase One (2008 - 2012)</h2>
         <div class="container">
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/IronMan1.jpg" alt="IronMan-1" />
             </div>
@@ -97,7 +98,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/Hulk.jpg"
@@ -116,7 +117,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/IronMan2.jpg" alt="IronMan 2" />
             </div>
@@ -131,7 +132,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/Thor.jpg" alt="Thor" />
             </div>
@@ -146,7 +147,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/CaptainAmerica.jpg"
@@ -165,7 +166,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/Avengers.jpg" alt="The Avengers" />
             </div>
@@ -186,7 +187,7 @@
       <div>
         <h2 class="phase">Phase Two (2013 - 2015)</h2>
         <div class="container">
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/IronMan3.jpg"
@@ -206,7 +207,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/ThorDarkWorld.jpg"
@@ -225,7 +226,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/CaptainAmericaWinterSoldier.jpg"
@@ -243,7 +244,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/GaurdiansOfTheGalaxy1.jpg"
@@ -262,7 +263,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/AvengersAgeOfUltron.jpg"
@@ -281,7 +282,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/AntMan.webp" alt="Ant-Man" />
             </div>
@@ -302,7 +303,7 @@
       <div>
         <h2 class="phase">Phase Three (2016 - 2019)</h2>
         <div class="container">
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/CaptainAmericaCivilWar.jpg"
@@ -320,7 +321,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/DoctorStrange.jpg"
@@ -340,7 +341,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/GaurdiansOfTheGalaxyV2.jpg"
@@ -359,7 +360,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/SpiderManHomeComing.jpg"
@@ -377,7 +378,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/ThorRagnarok.jpg"
@@ -395,7 +396,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/BlackPanther.jpg" alt="Black Panther" />
             </div>
@@ -410,7 +411,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/AvengersInfinityWar.jpg"
@@ -429,7 +430,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/AntManAndTheWasp.jpg"
@@ -447,7 +448,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/CaptainMarvel.jpg" alt="Captain Marvel" />
             </div>
@@ -462,7 +463,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/AvengersEndGame.jpg"
@@ -480,7 +481,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/SpiderManFarFromHome.jpg"
@@ -507,7 +508,7 @@
         </h1>
         <h2 class="phase">Phase Four (2021 - 2022)</h2>
         <div class="container">
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/BlackWidow.jpg" alt="Black Widow" />
             </div>
@@ -522,7 +523,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/ShangiChi.jpg"
@@ -541,7 +542,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/Eternals.jpg" alt="Eternals" />
             </div>
@@ -556,7 +557,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/SpiderManNoWayHome.jpg"
@@ -575,7 +576,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/DoctorStrangeMultiverseOfMadness.jpg"
@@ -594,7 +595,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/ThorLoveAndThunder.jpg"
@@ -615,7 +616,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/WakkandaForever.jpg"
@@ -640,7 +641,7 @@
       <div>
         <h2 class="phase">Phase Five (2023 - 2025)</h2>
         <div class="container">
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/AntManQuantumania.jpg"
@@ -659,7 +660,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/GuardiansOfTheGalaxyV3.jpg"
@@ -678,7 +679,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/TheMarvels.jpg" alt="The Marvels" />
             </div>
@@ -697,7 +698,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/DeadpoolAndWolverine.jpg"
@@ -717,7 +718,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/marvel3.jpg"
@@ -736,7 +737,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/Thunderbolts.jpg"
@@ -760,7 +761,7 @@
       <div>
         <h2 class="phase">Phase Six (2025 - 2027)</h2>
         <div class="container">
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/marvel1.jpg"
@@ -778,7 +779,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/SpiderManBrandNewDay.jpg"
@@ -797,7 +798,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/AvengersDoomsday.webp"
@@ -814,7 +815,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/AvengersSecrectWars.png"
@@ -832,14 +833,14 @@
     </div>
 
     <!-- Marvel Series -->
-    <div class="marvelSeries">
+    <div class="marvel-Series">
       <h1 >
-        <span id="marvelseries"></span>
+        <span id="marvel-series"></span>
       </h1>
       <div>
         <h2 class="phase">Phase Four (2021 - 2022)</h2>
         <div class="container">
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/marvel1.jpg" alt="Wanda Vision" />
             </div>
@@ -854,7 +855,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/marvel2.jpg"
@@ -872,7 +873,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/marvel3.jpg" alt="Loki" />
             </div>
@@ -887,7 +888,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/WhatIf.jpg" alt="What If...?" />
             </div>
@@ -901,7 +902,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/marvel2.jpg" alt="Hawkeye" />
             </div>
@@ -915,7 +916,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/marvel3.jpg"
@@ -932,7 +933,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/ImGroot.jpg" alt="I Am Groot" />
             </div>
@@ -947,7 +948,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/marvel3.jpg" alt="Moon Knight" />
             </div>
@@ -961,7 +962,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/marvel3.jpg"
@@ -980,7 +981,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/marvel3.jpg" alt="Ms. Marvel" />
             </div>
@@ -996,7 +997,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/marvel3.jpg"
@@ -1019,7 +1020,7 @@
       <div>
         <h2 class="phase">Phase Five (2023 - 2025)</h2>
         <div class="container">
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/marvel1.jpg"
@@ -1038,7 +1039,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/marvel2.jpg"
@@ -1056,7 +1057,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/WhatIf.jpg"
@@ -1073,7 +1074,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/WhatIf.jpg"
@@ -1090,7 +1091,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/marvel2.jpg" alt="Echo" />
             </div>
@@ -1106,7 +1107,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/AgathaAllAlong.jpg"
@@ -1124,7 +1125,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/YourFriendlyNeighborhoodSpiderMan.jpg"
@@ -1138,7 +1139,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/marvel1.jpg"
@@ -1155,7 +1156,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img src="./assets/img/titles/marvel2.jpg" alt="Ironheart" />
             </div>
@@ -1169,7 +1170,7 @@
             </div>
           </div>
 
-          <div class="movieSession">
+          <div class="movie-session">
             <div>
               <img
                 src="./assets/img/titles/marvel3.jpg"
@@ -1195,7 +1196,7 @@
         <span id="sony"></span>
       </h1>
       <div class="container">
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/marvel1.jpg" alt="Spider-Man" />
           </div>
@@ -1211,7 +1212,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/marvel2.jpg" alt="Spider-Man 2" />
           </div>
@@ -1227,7 +1228,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/marvel3.jpg" alt="Spider-Man 3" />
           </div>
@@ -1242,7 +1243,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/marvel1.jpg"
@@ -1260,7 +1261,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/marvel2.jpg"
@@ -1279,7 +1280,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/Venom1.jpg" alt="Venom" />
           </div>
@@ -1295,7 +1296,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/Venom2.jpg"
@@ -1313,7 +1314,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/marvel3.jpg" alt="Morbius" />
           </div>
@@ -1328,7 +1329,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/marvel1.jpg" alt="Madame Web" />
           </div>
@@ -1344,7 +1345,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/Venom3.jpg"
@@ -1362,7 +1363,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/KravenTheHunter.jpg"
@@ -1389,7 +1390,7 @@
       </h1>
       <h2 class="phase">Fantastic Four Movies</h2>
       <div class="container">
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/FantasticFour1.jpg"
@@ -1407,7 +1408,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/FantasticFour2.jpg"
@@ -1429,7 +1430,7 @@
 
       <h2 class="phase">X-Men Movies</h2>
       <div class="container">
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/xMen1.jpg" alt="X-Men" />
           </div>
@@ -1444,7 +1445,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/xMen2.jpg" alt="X2" />
           </div>
@@ -1459,7 +1460,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/xMen3.jpg"
@@ -1478,7 +1479,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/wolverine1.jpg"
@@ -1496,7 +1497,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/marvel1.jpg"
@@ -1515,7 +1516,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/marvel2.jpg" alt="The Wolverine" />
           </div>
@@ -1530,7 +1531,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/marvel3.jpg"
@@ -1548,7 +1549,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img
               src="./assets/img/titles/marvel1.jpg"
@@ -1566,7 +1567,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/marvel1.jpg" alt="Deadpool" />
           </div>
@@ -1582,7 +1583,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/marvel2.jpg" alt="Logan" />
           </div>
@@ -1597,7 +1598,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/Venom3.jpg" alt="Deadpool 2" />
           </div>
@@ -1613,7 +1614,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/marvel1.jpg" alt="Dark Phoenix" />
           </div>
@@ -1628,7 +1629,7 @@
           </div>
         </div>
 
-        <div class="movieSession">
+        <div class="movie-session">
           <div>
             <img src="./assets/img/titles/marvel2.jpg" alt="The New Mutants" />
           </div>

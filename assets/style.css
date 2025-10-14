@@ -5,27 +5,22 @@
 }
 
 :root {
-  --bg: #0b0c10;
-  --border: rgba(148, 163, 184, 0.1);
+  --background-color: #0b0c10;
+  --border-color: rgba(148, 163, 184, 0.1);
   --panel: #111318;
-  --bg-primary: #0f172a;
-  --muted: #a8b2c6;  
+  --spinner-bg: #0f172a;
+  --grey: #a8b2c6;
   --text: #e6e9ef;
   --brand: #5b8cff;
   --brand-2: #7bd389;
---border: rgba(148, 163, 184, 0.1);
-    --primary: #2563eb;
-  --secondary: #10b981;
-  --danger: #ff6b6b;
-  --ring: 0 0 0 3px rgb(91 140 255 / 0.35);
-  --radius: 16px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --shadow-soft: 0 6px 16px rgba(0, 0, 0, 0.25);
-  --maxw: 1200px;
+  --primary-blue: #2563eb;
   --marvel-blue: rgba(5, 236, 236, 0.863);
---marvel-gold: #f5a623;
---shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.45);
---gradient: linear-gradient(147deg, var(--marvel-blue) 100%, var(--primary) 0%);
+  --marvel-gold: #f5a623;
+  --gradient: linear-gradient(
+    147deg,
+    var(--marvel-blue) 100%,
+    var(--primary-blue) 0%
+  );
 }
 
 /* Body Styling */
@@ -33,7 +28,7 @@ body {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
-  background: var(--bg);
+  background: var(--background-color);
   color: var(--text);
   line-height: 1.5;
   letter-spacing: 0.2px;
@@ -69,9 +64,9 @@ html {
 .spinner {
   width: 50px;
   height: 50px;
-  border: 3px solid var(--bg-primary);
+  border: 3px solid var(--spinner-bg);
   border-top: 3px solid var(--marvel);
-  border-right: 3px solid var(--brand);  /* Add this line */
+  border-right: 3px solid var(--brand); /* Add this line */
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -92,7 +87,7 @@ html {
   right: 30px;
   width: 50px;
   height: 50px;
-   background: var(--gradient);
+  background: var(--gradient);
   color: white;
   border: none;
   border-radius: 50%;
@@ -100,7 +95,6 @@ html {
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  box-shadow: var(--shadow);
   opacity: 0;
   transform: translateY(100px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -121,15 +115,13 @@ html {
   box-shadow: var(--panel);
 }
 
-
-
 /* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
-    background-color: var(--panel);
- border-bottom: 2px solid var(--border);
- backdrop-filter: blur(20px);
+  background-color: var(--panel);
+  border-bottom: 2px solid var(--border-color);
+  backdrop-filter: blur(20px);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   position: fixed;
@@ -149,7 +141,7 @@ html {
   transform: scale(1.07);
 }
 
-.navbar .navbarList {
+.navbar .navbar-list {
   display: flex;
   gap: 22px;
   align-items: center;
@@ -158,8 +150,8 @@ html {
 }
 
 /* Navbar Icons Styling */
-.navbar .showNavbar,
-.navbar .closeNavbar {
+.navbar .show-navbar,
+.navbar .close-navbar {
   color: var(--text);
   font-size: 28px;
   display: none;
@@ -167,24 +159,24 @@ html {
   transition: 0.2s ease;
 }
 
-.navbar .showNavbar .togglebtn,
-.navbar .closeNavbar .xMark {
+.navbar .show-navbar .toggle-btn,
+.navbar .close-navbar .x-mark {
   cursor: pointer;
   padding: 3px;
   border-radius: 7px;
   display: none;
 }
 
-.navbar .showNavbar:hover,
-.navbar .closeNavbar:hover {
+.navbar .show-navbar:hover,
+.navbar .close-navbar:hover {
   transform: translateY(-1px);
-    color: var(--marvel-blue);
+  color: var(--marvel-blue);
 }
 
 /* Side Navbar Styling */
-.sideNavbar {
+.side-navbar {
   background-color: var(--panel);
-  border-right: 1px solid var(--border);
+  border-right: 1px solid var(--border-color);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   width: 55%;
@@ -198,15 +190,15 @@ html {
   padding-top: 10rem;
 }
 
-.sideNavbar .sideNavbarList {
+.side-navbar .side-navbar-list {
   display: grid;
   justify-content: center;
   gap: 28px;
 }
 
 /* Navbar Content Styling */
-.navbarList a,
-.sideNavbarList a {
+.navbar-list a,
+.side-navbar-list a {
   text-decoration: none;
   color: var(--text);
   font-style: italic;
@@ -220,29 +212,33 @@ html {
   overflow: hidden;
 }
 
-.navbarList a::before,
-.sideNavbarList a::before {
-  content: '';
+.navbar-list a::before,
+.side-navbar-list a::before {
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, var(--marvel-blue), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--marvel-blue),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
-.navbarList a:hover::before,
-.sideNavbarList a:hover::before {
+.navbar-list a:hover::before,
+.side-navbar-list a:hover::before {
   left: 100%;
 }
 
-.navbarList a:hover,
-.sideNavbarList a:hover {
+.navbar-list a:hover,
+.side-navbar-list a:hover {
   color: var(--marvel-blue);
   border-color: var(--marvel-blue);
   transform: translateY(-3px);
-    border-radius: 13px;
 }
 
 /* Movies Session Styling */
@@ -257,7 +253,7 @@ h1 {
 .phase {
   color: var(--brand-2);
   text-align: center;
-    margin-bottom: 7px;
+  margin-bottom: 7px;
   font-size: 1.7em;
 }
 
@@ -266,53 +262,51 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 28px;
-    gap: 20px; 
+  gap: 20px;
 }
 
-.container .movieSession {
+.container .movie-session {
   text-align: center;
   width: 367px;
   padding: 22px;
   color: var(--text);
   background-color: #0d0d0df1;
-  border: 0.7px solid rgba(222, 222, 222, 0);
-border-color:rgba(222, 222, 222, 0.1);
+  border: 2px solid rgba(222, 222, 222, 0);
+  border-color: rgba(222, 222, 222, 0.1);
   box-shadow: 0 0 15px rgba(222, 222, 222, 0.021);
   border-radius: 13px;
   margin-bottom: 28px;
   font-size: 20px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
 
-
-.container .movieSession:hover {
+.container .movie-session:hover {
   transform: translateY(-8px) scale(1.02);
-    border: 2px solid rgba(222, 222, 222, 0);
-  border-color:rgba(222, 222, 222, 0.1);
+  border: 3px solid rgba(222, 222, 222, 0);
 }
-.movieSession img {
+.movie-session img {
   width: 100%;
   min-width: 310px;
   height: 140px;
   min-height: 140px;
   border-radius: 7px;
   object-fit: cover;
-    transition: all 0.4s ease;
+  transition: all 0.4s ease;
   border: 2px solid transparent;
 }
 
-.movieSession:hover img {
+.movie-session:hover img {
   transform: scale(1.028);
 }
 
-.movieSession .content {
+.movie-session .content {
   display: grid;
   justify-content: space-around;
   gap: 5px;
   padding: 5px;
-    position: relative;
+  position: relative;
   z-index: 1;
 }
 
@@ -334,12 +328,12 @@ border-color:rgba(222, 222, 222, 0.1);
 /* Footer */
 .footer {
   text-align: center;
-  border-top: 2px solid var(--border);
+  border-top: 2px solid var(--border-color);
   font-style: italic;
 }
 
 .footer p {
-  color: var(--muted);
+  color: var(--grey);
   font-weight: 700;
   font-size: 20px;
   font-style: italic;
@@ -353,7 +347,7 @@ border-color:rgba(222, 222, 222, 0.1);
 }
 
 .footer a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -365,47 +359,43 @@ border-color:rgba(222, 222, 222, 0.1);
 
 .footer a:hover {
   color: var(--text);
-
 }
 
 .footer a:hover::after {
   width: 100%;
 }
 
-
 /* Mobile Screen Responsive Styling */
 @media screen and (max-width: 910px) {
-  .navbar .navbarList {
+  .navbar .navbar-list {
     display: none;
   }
 
-  .navbar .showNavbar {
+  .navbar .show-navbar {
     display: flex;
     padding: 22px;
   }
 
-  .navbar .closeNavbar {
+  .navbar .close-navbar {
     padding: 22px;
   }
 
-  .sideNavbar {
+  .side-navbar {
     display: block;
   }
-  
-  .navbar .showNavbar .togglebtn,
-  .navbar .closeNavbar .xMark {
+
+  .navbar .show-navbar .toggle-btn,
+  .navbar .close-navbar .x-mark {
     display: block;
   }
 
   html {
-  scroll-padding-top: 147px;
-  scroll-behavior: smooth;
-}
+    scroll-padding-top: 147px;
+    scroll-behavior: smooth;
+  }
 
-  .container .movieSession {
+  .container .movie-session {
     width: 100%;
     max-width: 400px;
   }
-
-
 }
