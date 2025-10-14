@@ -66,7 +66,7 @@ html {
   height: 50px;
   border: 3px solid var(--spinner-bg);
   border-top: 3px solid var(--marvel);
-  border-right: 3px solid var(--brand); /* Add this line */
+  border-right: 3px solid var(--marvel-blue);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -284,7 +284,6 @@ h1 {
 
 .container .movie-session:hover {
   transform: translateY(-8px) scale(1.02);
-  border: 3px solid rgba(222, 222, 222, 0);
 }
 .movie-session img {
   width: 100%;
