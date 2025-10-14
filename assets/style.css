@@ -13,15 +13,19 @@
   --text: #e6e9ef;
   --brand: #5b8cff;
   --brand-2: #7bd389;
+--border: rgba(148, 163, 184, 0.1);
+    --primary: #2563eb;
+  --secondary: #10b981;
   --danger: #ff6b6b;
   --ring: 0 0 0 3px rgb(91 140 255 / 0.35);
   --radius: 16px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   --shadow-soft: 0 6px 16px rgba(0, 0, 0, 0.25);
   --maxw: 1200px;
-  --marvel-red: #E23636;
+  --marvel-blue: rgba(5, 236, 236, 0.863);
 --marvel-gold: #f5a623;
 --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.45);
+--gradient: linear-gradient(147deg, var(--primary) 0%, var(--marvel-blue) 100%);
 }
 
 /* Body Styling */
@@ -38,7 +42,7 @@ body {
 
 /* HTML Scroll Styling */
 html {
-  scroll-padding-top: 123px;
+  scroll-padding-top: 128px;
   scroll-behavior: smooth;
 }
 
@@ -88,7 +92,7 @@ html {
   right: 30px;
   width: 50px;
   height: 50px;
-  background: var(--bg-primary);
+   background: var(--gradient);
   color: white;
   border: none;
   border-radius: 50%;
@@ -101,6 +105,7 @@ html {
   transform: translateY(100px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
+  cursor: pointer;
 }
 
 .scroll-top i {
@@ -117,12 +122,15 @@ html {
   box-shadow: var(--panel);
 }
 
+
+
 /* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--panel);
-  border-bottom: 1px solid rgba(140, 150, 170, 0.15);
+    background-color: var(--panel);
+ border-bottom: 2px solid var(--border);
+ backdrop-filter: blur(20px);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   position: fixed;
@@ -130,10 +138,16 @@ html {
   left: 0px;
   z-index: 28;
   width: 100%;
+  padding: 1px 13px;
 }
 
 .navbar img {
   margin: 13px;
+  transition: transform 0.3s ease;
+}
+
+.navbar img:hover {
+  transform: scale(1.07);
 }
 
 .navbar .navbarList {
@@ -165,12 +179,13 @@ html {
 .navbar .showNavbar:hover,
 .navbar .closeNavbar:hover {
   transform: translateY(-1px);
+    color: var(--marvel-blue);
 }
 
 /* Side Navbar Styling */
 .sideNavbar {
   background-color: var(--panel);
-  border-right: 1px solid rgba(140, 150, 170, 0.15);
+  border-right: 1px solid var(--border);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   width: 55%;
@@ -181,7 +196,7 @@ html {
   z-index: 22;
   left: -70%;
   transition: 1s;
-  padding-top: 143px;
+  padding-top: 10rem;
 }
 
 .sideNavbar .sideNavbarList {
@@ -201,28 +216,50 @@ html {
   cursor: pointer;
   border: 1px solid rgba(140, 150, 170, 0.25);
   border-radius: 13px;
-  transition: 0.2s ease;
+  transition: all 0.3s ease;
   padding: 10px 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbarList a::before,
+.sideNavbarList a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--marvel-blue), transparent);
+  transition: left 0.5s ease;
+}
+
+.navbarList a:hover::before,
+.sideNavbarList a:hover::before {
+  left: 100%;
 }
 
 .navbarList a:hover,
 .sideNavbarList a:hover {
-  color: var(--brand);
+  color: var(--marvel-blue);
+  border-color: var(--marvel-blue);
   transform: translateY(-3px);
-  box-shadow: var(--shadow-soft);
 }
 
 /* Movies Session Styling */
 h1 {
-  color: #f5a623;
+  color: var(--marvel-gold);
   text-align: center;
-  padding-top: 17px;
+  padding-top: 22px;
   margin-bottom: 13px;
+  font-size: 2.2em;
 }
 
 .phase {
   color: var(--brand-2);
   text-align: center;
+    margin-bottom: 7px;
+  font-size: 1.7em;
 }
 
 .container {
@@ -230,21 +267,31 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 28px;
+    gap: 20px; 
 }
 
 .container .movieSession {
   text-align: center;
-  width: 360px;
+  width: 367px;
   padding: 22px;
   color: var(--text);
-  background-color: #0d0d0d;
-  border: 1px solid rgba(222, 222, 222, 0.1);
-  box-shadow: 0 0 15px rgba(222, 222, 222, 0.1);
+  background-color: #0d0d0ddc;
+  border: 2px solid rgba(222, 222, 222, 0);
+
+  box-shadow: 0 0 15px rgba(222, 222, 222, 0.021);
   border-radius: 13px;
   margin-bottom: 28px;
   font-size: 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
+
+.container .movieSession:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color:rgba(222, 222, 222, 0.1);
+}
 .movieSession img {
   width: 100%;
   min-width: 310px;
@@ -252,16 +299,25 @@ h1 {
   min-height: 140px;
   border-radius: 7px;
   object-fit: cover;
+    transition: all 0.4s ease;
+  border: 2px solid transparent;
 }
+
+.movieSession:hover img {
+  transform: scale(1.028);
+}
+
 .movieSession .content {
   display: grid;
   justify-content: space-around;
   gap: 5px;
   padding: 5px;
+    position: relative;
+  z-index: 1;
 }
 
 .content h2 {
-  color: aqua;
+  color: var(--marvel-blue);
 }
 
 .content h3 {
@@ -271,6 +327,8 @@ h1 {
 .content p {
   font-size: 20px;
   font-family: "Playfair Display", serif;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
 /* Footer */
@@ -288,13 +346,35 @@ h1 {
 }
 
 .footer a {
-  color: var(--brand);
+  color: var(--marvel-blue);
   text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient);
+  transition: width 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--text);
+
+}
+
+.footer a:hover::after {
+  width: 100%;
 }
 
 
 /* Mobile Screen Responsive Styling */
-@media screen and (max-width: 876px) {
+@media screen and (max-width: 910px) {
   .navbar .navbarList {
     display: none;
   }
@@ -317,8 +397,15 @@ h1 {
     display: block;
   }
 
-  .scroll-top {
-    right: 17px;
-    bottom: 28px;
+  html {
+  scroll-padding-top: 147px;
+  scroll-behavior: smooth;
+}
+
+  .container .movieSession {
+    width: 100%;
+    max-width: 400px;
   }
+
+
 }
