@@ -26,7 +26,6 @@ scrollTop.addEventListener("click", () => {
   });
 });
 
-
 //Navbar Script
 
 let sideNavbar = document.querySelector(".side-navbar");
@@ -59,6 +58,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Close dropdown when clicking any Phase link
+const navDropdownBtn = document.querySelector(".dropdown-btn");
+const navDropdown = document.querySelector(".dropdown-content");
+const navLinks = document.querySelectorAll(".dropdown-content a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navDropdown.style.display = "none";
+  });
+});
+
+navDropdownBtn.addEventListener("mouseover", function () {
+  navDropdown.style.display = "flex";
+});
+
 // Animation script for Marvel Movies
 const animationMarvelMovies = ["The Infinity Saga"];
 
@@ -69,7 +83,7 @@ new Typed("#marvel-movies", {
   backSpeed: 222,
   loop: true,
   showCursor: true,
-  cursorChar: "|"
+  cursorChar: "|",
 });
 
 const animationMultiverseSaga = ["The Multiverse Saga"];
@@ -82,7 +96,7 @@ new Typed("#multiverse", {
   backSpeed: 222,
   loop: true,
   showCursor: true,
-  cursorChar: "|"
+  cursorChar: "|",
 });
 
 // Animation script for Marvel Series
@@ -96,7 +110,7 @@ new Typed("#marvel-series", {
   backSpeed: 222,
   loop: true,
   showCursor: true,
-  cursorChar: "|"
+  cursorChar: "|",
 });
 
 // Animation script for Sony Movies
@@ -110,7 +124,7 @@ new Typed("#sony", {
   backSpeed: 222,
   loop: true,
   showCursor: true,
-  cursorChar: "|"
+  cursorChar: "|",
 });
 
 // Animation script for Fox Movies
@@ -124,7 +138,7 @@ new Typed("#fox", {
   backSpeed: 222,
   loop: true,
   showCursor: true,
-  cursorChar: "|"
+  cursorChar: "|",
 });
 
 // Get the current year
