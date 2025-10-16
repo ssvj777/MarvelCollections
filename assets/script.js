@@ -73,6 +73,10 @@ navDropdownBtn.addEventListener("mouseover", function () {
   navDropdown.style.display = "flex";
 });
 
+navDropdownBtn.addEventListener("click", function () {
+  navDropdown.style.display = "none";
+});
+
 // Animation script for Marvel Movies
 const animationMarvelMovies = ["The Infinity Saga"];
 
