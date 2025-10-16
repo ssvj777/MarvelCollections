@@ -58,23 +58,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Close dropdown when clicking any Phase link
-const navDropdownBtn = document.querySelector(".dropdown-btn");
-const navDropdown = document.querySelector(".dropdown-content");
-const navLinks = document.querySelectorAll(".dropdown-content a");
+// Select ALL dropdowns
+const dropdowns = document.querySelectorAll(".dropdown");
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navDropdown.style.display = "none";
+dropdowns.forEach((dropdown) => {
+  const btn = dropdown.querySelector(".dropdown-btn");
+  const links = dropdown.querySelectorAll(".dropdown-content a");
+
+  // Toggle this dropdown only
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Close other dropdowns first
+    dropdowns.forEach((otherDropdown) => {
+      if (otherDropdown !== dropdown) {
+        otherDropdown.classList.remove("open");
+      }
+    });
+
+    // Toggle the current one
+    dropdown.classList.toggle("open");
+  });
+
+  // Close dropdown when clicking any link
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      dropdown.classList.remove("open");
+    });
   });
 });
 
-navDropdownBtn.addEventListener("click", function () {
-  navDropdown.style.display = "none";
-});
-
-navDropdownBtn.addEventListener("mouseover", function () {
-  navDropdown.style.display = "flex";
+// Close all dropdowns when clicking outside
+document.addEventListener("click", (e) => {
+  dropdowns.forEach((dropdown) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("open");
+    }
+  });
 });
 
 // Animation script for Marvel Movies

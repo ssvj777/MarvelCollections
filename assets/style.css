@@ -273,8 +273,8 @@ html {
   backdrop-filter: blur(15px);
 }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
+/* Active Dropdown (when open via click) */
+.dropdown.open .dropdown-content {
   display: flex;
 }
 
@@ -418,7 +418,7 @@ h1 {
 }
 
 /* Mobile Screen Responsive Styling */
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 987px) {
   .navbar .navbar-list {
     display: none;
   }
@@ -449,5 +449,10 @@ h1 {
   .container .movie-session {
     width: 100%;
     max-width: 400px;
+  }
+
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: flex;
   }
 }
