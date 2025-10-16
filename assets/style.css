@@ -213,6 +213,7 @@ html {
 }
 
 .navbar-list a::before,
+.dropdown-content a::before,
 .side-navbar-list a::before {
   content: "";
   position: absolute;
@@ -230,16 +231,69 @@ html {
 }
 
 .navbar-list a:hover::before,
+.dropdown-content a:hover::before,
 .side-navbar-list a:hover::before {
   left: 100%;
 }
 
 .navbar-list a:hover,
+.dropdown-content a:hover,
 .side-navbar-list a:hover {
   color: var(--marvel-blue);
   border-color: var(--marvel-blue);
   transform: translateY(-3px);
 }
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--panel);
+  border: 1px solid var(--border-color);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 25px;
+  border-radius: 13px;
+  z-index: 30;
+  min-width: 167px;
+  flex-direction: column;
+  padding: 10px 0;
+  backdrop-filter: blur(15px);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Dropdown Items */
+.dropdown-content a {
+  text-decoration: none;
+  color: var(--text);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid rgba(140, 150, 170, 0.25);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  padding: 10px 22px;
+  margin: 4px 10px;
+  position: relative;
+  overflow: hidden;
+}
+
 
 /* Movies Session Styling */
 h1 {
