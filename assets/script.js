@@ -69,12 +69,12 @@ navLinks.forEach((link) => {
   });
 });
 
-navDropdownBtn.addEventListener("mouseover", function () {
-  navDropdown.style.display = "flex";
-});
-
 navDropdownBtn.addEventListener("click", function () {
   navDropdown.style.display = "none";
+});
+
+navDropdownBtn.addEventListener("mouseover", function () {
+  navDropdown.style.display = "flex";
 });
 
 // Animation script for Marvel Movies
