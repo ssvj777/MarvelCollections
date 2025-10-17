@@ -450,9 +450,4 @@ h1 {
     width: 100%;
     max-width: 400px;
   }
-
-  /* Show dropdown on hover */
-  .dropdown:hover .dropdown-content {
-    display: flex;
-  }
 }
